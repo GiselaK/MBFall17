@@ -14,35 +14,77 @@
             Marque: 
             <div></div>
             <marquee> Hi! </marquee>
-            <pre><code><span>&lt;marquee&gt;</span> Hi! <span>&lt;marquee/&gt;</span> </code></pre>
+            <code><span>&lt;marquee&gt;</span> Hi! <span>&lt;marquee/&gt;</span> </code>
         </div>
         <div>
             Bold: <span><b>Hi!</b></span>
-            <pre><code><span>&lt;b&gt;</span> Hi! <span>&lt;b/&gt;</span></code></pre>
+            <code><span>&lt;b&gt;</span> Hi! <span>&lt;b/&gt;</span></code>
         </div>
         <div>
             Links: <a href="http://procatinator.com/">Random Website</a>
-            <pre><code><span>&lt;a href="http://missionbit.com/"&gt;</span> Random Website <span>&lt;a/&gt;</span></code></pre>
+            <code><span>&lt;a href="http://missionbit.com/"&gt;</span> Random Website <span>&lt;a/&gt;</span></code>
         </div>
         <div>
-            Images: <img src="assets/fun/dancing.gif" height="200" width="250"><br>
-            From file: <pre><code><span>&lt;img src="assets/fun/dancing.gif" height="200" width="250"&gt;</span> Hi! <span>&lt;img/&gt;</span> </code></pre>
-            From website: <pre><code><span>&lt;img src="https://media.giphy.com/media/pa37AAGzKXoek/giphy.gif" height="200" width="250"&gt;</span> Hi! <span>&lt;img/&gt;</span> </code></pre>
+            Images: <img class="dancing" src="assets/fun/dancing.gif" height="200" width="250"><br>
+            From file: <br> <code><span>&lt;img src="assets/fun/dancing.gif" height="200" width="250"&gt;</span> Hi! <span>&lt;img/&gt;</span> </code><br>
+            From website: <br> <code><span>&lt;img src="https://media.giphy.com/media/pa37AAGzKXoek/giphy.gif" height="200" width="250"&gt;</span> Hi! <span>&lt;img/&gt;</span> </code>
         </div>
         <div>
             Progress Bar: <progress value="22" max="100"></progress>
-            <pre><code><span>&lt;progress value="22" max="100"&gt;</span> Hi! <span>&lt;progress/&gt;</span> </code></pre>
+            <code><span>&lt;progress value="22" max="100"&gt;</span> Hi! <span>&lt;progress/&gt;</span> </code>
 
         </div>
         <div>
             Audio: <audio controls> <source src="assets/fun/peanut-butter-jelly-time.mp4"></audio>
-            <pre><code><span>&lt;audio controls&gt;</span> <span>&lt;source src="assets/fun/peanut-butter-jelly-time.mp4"&gt;</span> <span>&lt;audio/&gt;</span> </code></pre>
+            <code><span>&lt;audio controls&gt;</span> <span>&lt;source src="assets/fun/peanut-butter-jelly-time.mp4"&gt;</span> <span>&lt;audio/&gt;</span> </code>
         </div>
         <div>
-            Video: <iframe width="560" height="315" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe>
+            Video: <iframe width="560" height="315" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe><br>
+            Go on website such as youtube and they will provide this code for you.
         </div>
-            </li>
-        </ul>
+        <div>
+            Button that links to another page: <button onclick="location.href='https:/giselak.com/MBFall17'"> Past Lessons</button>
+            <br><code><span>&lt;button onclick="location.href='https:/giselak.com/MBFall17'"&gt;</span> Past Lessons<span>&lt;/button&gt;</code>
+        </div>
+        <div>
+            Appear for only one frame (Paste this code in the console): <br>
+            <code> var hideImage = function () {$('.dancing').hide()}; setTimeout(hideImage, 100);</code>
+        </div>
+        <div>
+            Create a text box: <input placeholder="Write here..."><br>
+            <code> <span>&lt;input placeholder="Write here..."&gt;</span><span></span></code>
+        </div>
+        <div>
+            How to stretch background: <br>
+            <code> <span>&lt;style&gt;</span> 
+                body {
+                    background: url("https://wallpapercave.com/wp/GgcdiFN.jpg") no-repeat center center fixed;
+                    background-size: cover;
+                }
+            <span>&lt;/style&gt;</span> </code> 
+        </div>
+        <div>
+            Make images move in run time: <br> <code>
+                function moveRandomly()
+                {
+                    var randomTop = Math.random()*window.innerHeight;
+                    var randomLeft = Math.random()*window.innerWidth;
+                    $(".dancing")[0].style.top=randomTop + "px";
+                    $(".dancing")[0].style.left=randomLeft + "px";
+                }
+
+                setInterval(moveRandomly, 1500);
+                
+              </code>
+
+        </div>
     </div>
 </body>
+<style>
+    .dancing {
+        position: absolute;
+        left: 70%;
+        top: 5%;
+    }
+</style>
 </html>

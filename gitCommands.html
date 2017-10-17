@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script> 
+    $(function(){
+      $("#navbar").load("navbar.html"); 
+    });
+    </script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style type="text/css">
+      #margin {
+        margin: 2cm 4cm 3cm 4cm;
+      }
+    </style>
+  </head> 
+<body>
+<div id="navbar"></div>
+<div id="margin">
+
+<b> How to push to Github</b><br>
+
+Start a Github Project:
+Have <b>one</b> person in your group do the following steps (If you're unsure if you did a step right or want to learn about what each step does, grab a volunteer/instructor!):
+<ol>
+    <li> Create a folder on your Desktop<br>
+        You can do this by typing (without the parenthesis): <br>
+        <code>
+            cd ~/Desktop <br>
+            mkdir (folder-name)
+        </code>
+    </li>
+    <li> Switch folder name with the one you just created and type <code> cd ~/Desktop/(folder-name)</code> in the terminal (without the parenthesis)</li>
+    <li> Create repo on <a href="https://github.com/"> Github</a></li>
+    <li> Copy the code on Github under "…or create a new repository on the command line" and paste it into the terminal </li>
+    <li> Create an index.html file <b>inside the folder</b> that says "Hello World"</li>
+    <li> Paste <code> git checkout -b gh-pages</code> </li>
+    <li> Continue to Update Project On Github steps</li>
+    <li> (github-username).github.io/(repository-name) Should say "Hello World" (Grab a volunteer/instructor if it doesn't!)</li>
+    <li> If you're working with others, go to settings then collaborators and add your team members usernames</li>
+</ol>
+
+Have all other team members do the below <b>(Strongly advice team members to NOT work on the same files! One should push changes to one file before another team member touches that file)</b>:
+<ol>
+    <li> Navigate to your repository</li>
+    <li> Hit the green clone button & copy the url</li>
+    <li> Type (without the parenthesis) <code> git clone (paste url)</code> in the terminal</li>
+</ol>
+
+Update Project On Github:
+Type this in the terminal (without the parenthesis): <br>
+<code>
+    git add .<br>
+    git commit -m "(write changes you've made)"<br>
+    git push origin gh-pages <br><br>
+</code>
+
+
+</div>
+</body>
+</html>

@@ -54,6 +54,22 @@
                     <li> Add an if/elseif/else statement to print "Fizz", "Buzz", or "FizzBuzz" accordingly </li>
                     <li> Switch the for loop to use a function parameter instead of the number 100 </li>
                 </ol>
+                <button id = "FizzBuzzSolutionButton" type="button" class="btn btn-primary" onclick="showSolution('FizzBuzz')">Solution</button>
+                <div id = "FizzBuzzSolution" class = "solution"><pre>
+                        function fizzBuzz (x) {
+                            for(var i = 1; i <= x; i++) {
+                                if (i%15 === 0){
+                                    console.log("FizzBuzz");
+                                } else if (i%3 === 0){
+                                    console.log("Fizz");
+                                } else if (i%5 === 0) {
+                                    console.log("Buzz");
+                                } else {
+                                    console.log(i);
+                                }
+                            }
+                        }
+                    </pre></div>
             </li>
         </ul>
             
@@ -64,4 +80,10 @@
     </div>
     <!-- Add divs with uls  -->
 </body>
+<script>
+    $('.solution').hide();
+    function showSolution () {
+        $(`#${problem}Solution`).toggle();
+    }
+</script>
 </html>

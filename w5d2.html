@@ -29,6 +29,12 @@
                         getArea(2,2); -> 4 <br>
                         getArea(6,4); -> 24 <br>
                     </code>
+                    <button id = "getAreaSolutionButton" type="button" class="btn btn-primary" onclick="showSolution('getArea')">Solution</button>
+                    <div id = "getAreaSolution" class = "solution"><pre>
+                        function getArea (width, height) {
+                            return width * height;
+                        }
+                    </pre></div>
             </li>
             <li>
                 Make a function which prints all of the even numbers between (and including) two paremeters <br>
@@ -37,6 +43,16 @@
                     getEvens(1,10); -> "2 4 6 8 10" <br>
                     getEvens(10, 12) -> "10 12" <br>
                 </code>
+                <button id = "getEvensSolutionButton" type="button" class="btn btn-primary" onclick="showSolution('getEvens')">Solution</button>
+                <div id = "getEvensSolution" class = "solution"><pre>
+                    function getEvens (min,max) {
+                        for(var i = min; i <= max; i++) {
+                            if (i%2 === 0) {
+                                console.log(i);
+                            }
+                        }
+                    } 
+                </pre></div>
             </li>
         </ul>
 
@@ -94,4 +110,10 @@
     </div>
     <!-- Add divs with uls  -->
 </body>
+<script>
+    $('.solution').hide();
+    function showSolution (problem) {
+        $(`#${problem}Solution`).toggle();
+    }
+</script>
 </html>
